@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(194, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* The biggest container */
+.container{
+    background-color: white;
+    width: 40%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    border-radius: 40px;
+}
+
+/* The container of main top buttons */
+.container .container-of-main{
+    /* margin-top: 25px; */
+    background-color: rgb(223, 223, 223);
+    grid-column: 1/6;
+    grid-row: 1/2;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* The top main buttons */
+.container .container-of-main .log-in-btn-main{
+    background-color: rgb(211, 211, 211);
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .container-of-main .log-in-btn-main:hover{
+    background-color: rgb(100, 100, 100);
+    color: white;
+    cursor: pointer;
+}
+.container .container-of-main .sign-up-btn-main{
+    background-color: rgb(211, 211, 211);
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .container-of-main .sign-up-btn-main:hover{
+    background-color: rgb(100, 100, 100);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* All Inputs & Buttons */
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    /* border-left: 1px solid black; */
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+}
+label{
+    user-select: none;
+}
+label:hover{
+    cursor: text;
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 4px;
+    min-width: 40%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    border: 1.5px rgb(2, 184, 2) solid;
+}
+button:hover{
+    background-color: rgb(0, 218, 0);
+    cursor: pointer;
+}
+
+/* The login page */
+.container .log-in {
+    grid-column: 2/5;
+    grid-row: 2/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    display: block;
+    transition: 1s;
+}
+.container .log-in form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+    position: relative;
+}
+.container .log-in form #label-username{
+    position: absolute; top: 15%;
+    transition: 0.5s;
+}
+.container .log-in form #label-password{
+    position: absolute; top: 35%;
+    transition: 0.5s;
+}
+.container .log-in form #log-in-username:focus~#label-username,
+.container .log-in form #log-in-username:valid~#label-username{
+    position: absolute; top: 12%;
+    font-size: 10px;
+    color: black;
+}
+.container .log-in form #log-in-password:focus~#label-password,
+.container .log-in form #log-in-password:valid~#label-password{
+    position: absolute; top: 32%;
+    font-size: 10px;
+    color: black;
+}
+.container .log-in form #log-in-error-message{
+    color: red;
+    transition: 1s;
+    opacity: 0;
+    text-align: center;
+    font-size: 15px;    
+    user-select: none;
+}
+
+/* The sign up page */
+.container .sign-up {
+    grid-column: 2/5;
+    grid-row: 2/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+    transition: 1s;
+}
+.container .sign-up form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 28px;
+    position: relative;
+}
+.container .sign-up form #label-first-name{
+    position: absolute;top: -1%;
+    transition: 0.5s;
+}
+.container .sign-up form #label-last-name{
+    position: absolute;top: 10%;
+    transition: 0.5s;
+}
+.container .sign-up form #label-email{
+    position: absolute;top: 20%;
+    transition: 0.5s;
+}
+.container .sign-up form #label-sign-up-username{
+    position: absolute;top: 30%;
+    transition: 0.5s;
+}
+.container .sign-up form #label-sign-up-password{
+    position: absolute;top: 40%;
+    transition: 0.5s;
+}
+
+.container .sign-up form #first-name:focus~#label-first-name,
+.container .sign-up form #first-name:valid~#label-first-name{
+    position: absolute; top: -3%;
+    font-size: 10px;
+    color: black
+}
+.container .sign-up form #last-name:focus~#label-last-name,
+.container .sign-up form #last-name:valid~#label-last-name{
+    position: absolute; top: 8%;
+    font-size: 10px;
+    color: black
+}
+.container .sign-up form #sign-up-email:focus~#label-email,
+.container .sign-up form #sign-up-email:valid~#label-email{
+    position: absolute; top: 18%;
+    font-size: 10px;
+    color: black
+}
+.container .sign-up form #sign-up-username:focus~#label-sign-up-username,
+.container .sign-up form #sign-up-username:valid~#label-sign-up-username{
+    position: absolute; top: 28%;
+    font-size: 10px;
+    color: black
+}
+.container .sign-up form #sign-up-password:focus~#label-sign-up-password,
+.container .sign-up form #sign-up-password:valid~#label-sign-up-password{
+    position: absolute; top: 38%;
+    font-size: 10px;
+    color: black
+}
+
+.container .sign-up form #signup-error-message{
+    color: red;
+    transition: 1s;
+    opacity: 0;
+    text-align: center;
+    font-size: 15px;
+    user-select: none;
+}
+
+/* 
+.container .sign-up form #sign-up-btn-secondary{
+    margin-top: 5px;
+} */
+
+/* Home page */
+.container .home-page{
+    grid-column: 1/6;
+    grid-row: 1/7;
+    border-radius: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(79, 79, 79);
+    color: white;
+    padding: 10px;
+    gap: 10px;
+    display: none;
+    opacity: 0;
+    transition: 1s;
+    user-select: none;
+    position: relative;
+}
+
+.container .home-page h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+}
+
+.container .home-page p{
+    margin: 10px;
+    text-wrap: wrap;
+}
+
+.container .home-page #sign-out-btn{
+    min-width: 40%;
+    align-self: center;
+    margin-top: 80px;
+    background-color: brown;
+    border: none;
+    border-radius: 20px;
+    position: absolute; left: 30%;
+}
+
+.container .home-page #sign-out-btn:hover{
+    background-color: red;
+}

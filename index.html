@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+<div class="container">
+    
+<div class="container-of-main">
+    <div class="log-in-btn-main">Log in</div>
+    <div class="sign-up-btn-main">Sign up</div>
+</div>
+
+    <div class="log-in">
+        <form action="">
+            <input type="text" class="log-in-username" id="log-in-username" required>
+            <label for="log-in-username" id="label-username">Username</label>
+            <input type="password" class="log-in-password" id="log-in-password" required>
+            <label for="log-in-password" id="label-password">Password</label>
+            <p id="log-in-error-message">Incorrect username or password</p>
+            <button type="submit" id="log-in-btn-secondary">Log in</button>
+        </form>
+    </div>
+
+    <div class="sign-up">
+        <form action="">
+            <input type="text" name="first" id="first-name" required>
+            <label for="first-name" id="label-first-name">First Name</label>
+
+            <input type="text" name="last" id="last-name" required>
+            <label for="last-name" id="label-last-name">Last Name</label>
+
+            <input type="text" name="email" id="sign-up-email" required>
+            <label for="sign-up-email" id="label-email">Email</label>
+
+            <input type="username" name="username" id="sign-up-username" required>
+            <label for="sign-up-username" id="label-sign-up-username">Username</label>
+
+            <input type="password" name="password" id="sign-up-password" required>
+            <label for="sign-up-password" id="label-sign-up-password">Password</label>
+            <p id="signup-error-message">Make sure you filled all blanks!</p>
+            <button type="submit" id="sign-up-btn-secondary">Sign up</button>
+        </form>
+    </div>
+
+    <div class="home-page">
+        <h1 id="welcome-msg">Welcome</h1>
+        <p id="first-p">Lorem.</p>
+        <p id="second-p">Lorem.</p>
+        <p id="third-p">Lorem.</p>
+        <button id="sign-out-btn">Sign out</button>
+    </div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
